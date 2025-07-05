@@ -6,6 +6,7 @@ import {BrowserRouter,Link,Routes,Route} from 'react-router-dom'
 import CourseDetails from './CourseDetails';
 import ListofCourses from './ListofCourses';
 import Navbar from './Navbar';
+import AddCourse from './AddCourse';
 
 // class App extends React.Component{
 //   render(){
@@ -52,6 +53,7 @@ class App extends React.Component {
           <Routes>
             {/* <Route path="/courseDetails" element={<CourseDetails/>}/> */}
             <Route path="/" element={<ListofCourses />} />
+            <Route path="/addCourse" element={<AddCourse/>}/>
             <Route path="/courseDetails/:id" element={<CourseDetails />} />
             <Route path="/post" element={<Posts />} />
           </Routes>

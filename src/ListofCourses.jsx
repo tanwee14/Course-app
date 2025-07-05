@@ -128,7 +128,6 @@ class ListofCourses extends React.Component {
   render() {
     return (
       <div>
-        <AddCourse onCourseAdded={this.handleCourseAdded} />
         <div className="row">
           {this.state.courses.map((c) => (
             <Courses key={c._id} course={c} onDelete={this.handleDelete} />

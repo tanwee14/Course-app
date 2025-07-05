@@ -1,6 +1,7 @@
 import React from 'react';
 import CourseDetails from "./CourseDetails"
 import Posts from "./Posts"
+import AddCourse from './AddCourse';
 
 export default function Navbar() {
   return (
@@ -15,6 +16,9 @@ export default function Navbar() {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="/addCourse">Add Course</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/courseDetails">Courses</a>
