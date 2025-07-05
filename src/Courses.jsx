@@ -8,7 +8,7 @@ function Courses({ course ,onDelete }) {
   return (
     <div className="col-md-3 col-sm-2 my-1">
       <div className="card" style={{ width: "18rem" }}>
-        <Link to={`/courseDetails/${course.id}`}>
+        <Link to={`/courseDetails/${course._id}`}>
           <img
             src={course.imageUrl}
             className="card-img-top"

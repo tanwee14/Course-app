@@ -17,14 +17,14 @@ function CourseDetails() {
     })
     .catch((err)=>{
       console.log("error occured")
-      setLoading(true)
+      setLoading(false)
     })
 
   },[id])
 
   if (loading) return <div>Loading...</div>;
   if (!course) return <div>Course not found</div>;
-  
+
   return (
     <div className="row my-1">
       <div className="col-md-9">
