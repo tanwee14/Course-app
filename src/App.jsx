@@ -6,7 +6,7 @@ import {BrowserRouter,Link,Routes,Route} from 'react-router-dom'
 import CourseDetails from './CourseDetails';
 import ListofCourses from './ListofCourses';
 import Navbar from './Navbar';
-import course from './course';
+
 // class App extends React.Component{
 //   render(){
 //     // var messages = [{to:"hi" , from:"bye"},

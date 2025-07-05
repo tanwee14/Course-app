@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Rating from "./Rating";
 
-function Courses({ course }) {
+function Courses({ course ,onDelete }) {
   const [likes, setLikes] = useState(100);
 
   return (
@@ -28,6 +28,9 @@ function Courses({ course }) {
           <p className="card-text">Price : {course.price}</p>
           <button className="btn btn-primary" onClick={() => setLikes(likes + 1)}>
             Likes : {likes} <i className="fa-solid fa-thumbs-up"></i>
+          </button>
+          <button className="btn btn-danger" onClick={() => onDelete(course._id)}>
+            Delete <i className="fa-solid fa-trash"></i>
           </button>
         </div>
       </div>

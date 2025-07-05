@@ -106,12 +106,26 @@ class ListofCourses extends React.Component {
       });
   }
 
+  handleDelete = async (id) => {
+  try {
+    await fetch(`http://localhost:3000/courses/${id}`, {
+      method: "DELETE",
+    });
+    this.setState({
+      courses: this.state.courses.filter((course) => course._id !== id),
+    });
+  } catch (error) {
+    console.error("Failed to delete course:", error);
+  }
+};
+
+
   render() {
     return (
       <div>
         <div className="row">
           {this.state.courses.map((c) => (
-            <Courses key={c._id} course={c} />
+            <Courses key={c._id} course={c} onDelete={this.handleDelete} />
           ))}
         </div>
       </div>
