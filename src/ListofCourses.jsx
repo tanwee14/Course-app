@@ -81,6 +81,7 @@
 
 import React from "react";
 import Courses from "./Courses";
+import AddCourse from "./AddCourse";
 
 class ListofCourses extends React.Component {
   constructor(props) {
@@ -119,10 +120,15 @@ class ListofCourses extends React.Component {
   }
 };
 
+  handleCourseAdded = (newCourse) => {
+    this.setState({ courses: [...this.state.courses, newCourse] });
+  }
+
 
   render() {
     return (
       <div>
+        <AddCourse onCourseAdded={this.handleCourseAdded} />
         <div className="row">
           {this.state.courses.map((c) => (
             <Courses key={c._id} course={c} onDelete={this.handleDelete} />
